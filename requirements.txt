@@ -1,0 +1,24 @@
+# Tested with Python 3.11–3.14. Versions pinned because LangChain/LangGraph change quickly.
+
+# UI
+streamlit==1.65.0
+
+# LangGraph + persistence
+langgraph==1.2.11
+langgraph-checkpoint-sqlite==3.1.1
+langchain-core==1.6.9
+
+# Model providers (install all; only the ones you configure are used)
+langchain-ollama==1.1.0
+langchain-openai==1.7.0
+langchain-anthropic==1.7.5
+langchain-groq==1.1.3
+langchain-google-genai==4.4.1
+
+# File reading
+pypdf==6.20.0
+python-docx==1.2.0
+pandas==3.0.5
+
+# Config
+python-dotenv==1.2.3

@@ -1,0 +1,19 @@
+[server]
+# Hard upload cap in MB. The "Max file size" slider works within this limit.
+maxUploadSize = 50
+# "localhost" keeps the app (and your chats) reachable only from this computer.
+address = "localhost"
+port = 8501
+
+[browser]
+gatherUsageStats = false
+
+[client]
+toolbarMode = "minimal"
+
+[theme]
+base = "dark"
+primaryColor = "#7C83FD"
+backgroundColor = "#111318"
+secondaryBackgroundColor = "#1A1D24"
+textColor = "#E6E7EB"

@@ -1,0 +1,8 @@
+# Secrets and personal data — never commit these
+.env
+chat_history.db
+chat_history.db-*
+
+__pycache__/
+*.pyc
+.DS_Store

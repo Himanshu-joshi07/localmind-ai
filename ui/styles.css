@@ -1,0 +1,47 @@
+/* Hide Streamlit chrome so it feels like an app, not a demo. */
+#MainMenu, footer, [data-testid="stAppDeployButton"] { display: none !important; }
+
+.block-container { padding-top: 2rem; padding-bottom: 7rem; max-width: 820px; }
+
+/* ---------- Sidebar ---------- */
+.brand { display: flex; align-items: center; gap: .55rem; }
+.brand-icon { font-size: 1.8rem; line-height: 1; }
+.brand-name { font-size: 1.35rem; font-weight: 700; letter-spacing: -.01em; }
+.brand-tagline { font-size: .78rem; opacity: .6; margin: .2rem 0 1rem; }
+
+.history-group {
+    font-size: .7rem; font-weight: 600; text-transform: uppercase; letter-spacing: .07em;
+    opacity: .5; margin: .9rem 0 .15rem .35rem;
+}
+section[data-testid="stSidebar"] .stButton button { justify-content: flex-start; text-align: left; }
+section[data-testid="stSidebar"] [data-testid="stHorizontalBlock"] { gap: .25rem; }
+.sidebar-footer { font-size: .72rem; opacity: .5; margin-top: 1.2rem; line-height: 1.4; }
+
+/* ---------- Chat ---------- */
+.model-badge {
+    display: inline-block; font-size: .78rem; padding: .2rem .75rem; margin-bottom: .5rem;
+    border-radius: 999px; border: 1px solid rgba(128, 128, 128, .35); opacity: .85;
+}
+
+[data-testid="stChatMessage"] { background: transparent; padding: .5rem 0; }
+
+/* User messages: right-aligned bubble. The hidden marker identifies them. */
+[data-testid="stElementContainer"]:has(.user-marker) { display: none; }
+[data-testid="stChatMessage"]:has(.user-marker) { flex-direction: row-reverse; }
+[data-testid="stChatMessage"]:has(.user-marker) [data-testid="stChatMessageContent"] {
+    flex: 0 1 auto; max-width: 80%; width: fit-content; margin: 0 0 0 auto;
+    background: rgba(128, 128, 128, .14); border-radius: 18px; padding: .55rem 1rem;
+}
+[data-testid="stChatMessage"]:has(.user-marker) [data-testid="stMarkdownContainer"] p:last-child { margin-bottom: 0; }
+
+.file-chip {
+    display: inline-flex; align-items: center; gap: .35rem; margin-top: .35rem;
+    font-size: .8rem; padding: .25rem .7rem; border-radius: 10px;
+    background: rgba(124, 131, 253, .15); border: 1px solid rgba(124, 131, 253, .4);
+}
+
+/* ---------- Welcome screen ---------- */
+.welcome { text-align: center; margin: 10vh 0 1.5rem; }
+.welcome-logo { font-size: 3.2rem; line-height: 1; }
+.welcome h2 { font-weight: 600; margin: .6rem 0 .3rem; padding: 0; }
+.welcome p { opacity: .6; margin: 0; }
